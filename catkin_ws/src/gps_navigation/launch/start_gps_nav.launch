@@ -1,0 +1,20 @@
+<launch>
+
+    <!-- Run the map server -->
+    <include file="$(find gps_navigation)/launch/start_map_server.launch" />
+
+
+    <include file="$(find gps_navigation)/launch/start_navsat.launch" />
+
+    <!-- Run the ekf for map to odom config -->
+    <include file="$(find gps_navigation)/launch/ekf_localization.launch" />
+
+
+    <!-- Run Move Base -->
+    <include file="$(find my_move_base)/launch/my_move_base.launch" />
+    
+
+    <!-- <include file="$(find adrt)/adrt_gazebo/launch/adrt_gazebo.launch" /> -->
+    <!-- <include file="$(find adrt)/adrt_description/launch/rviz.launch" /> -->
+
+</launch>

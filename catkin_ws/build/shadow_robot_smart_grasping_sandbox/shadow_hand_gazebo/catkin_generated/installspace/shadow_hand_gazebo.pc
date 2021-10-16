@@ -1,0 +1,8 @@
+prefix=/home/mahrous/catkin_ws/install
+
+Name: shadow_hand_gazebo
+Description: Description of shadow_hand_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

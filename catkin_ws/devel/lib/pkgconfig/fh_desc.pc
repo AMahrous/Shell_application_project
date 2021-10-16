@@ -1,0 +1,8 @@
+prefix=/home/mahrous/catkin_ws/devel
+
+Name: fh_desc
+Description: Description of fh_desc
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: urdf xacro rospy

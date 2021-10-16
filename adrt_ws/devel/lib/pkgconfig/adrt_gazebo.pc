@@ -1,0 +1,8 @@
+prefix=/home/mahrous/adrt_ws/devel
+
+Name: adrt_gazebo
+Description: Description of adrt_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

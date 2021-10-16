@@ -1,0 +1,8 @@
+prefix=/home/mahrous/catkin_ws/devel
+
+Name: model_gazebo
+Description: Description of model_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

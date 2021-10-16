@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+
+
+<robot name="velodyne">
+  <joint name="velodyne__joint" type="revolute">
+    <parent link="velodyne__base"/>
+    <child link="velodyne__top"/>
+    <origin rpy="0  0  0" xyz="0       0       0.05867"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="0.0" lower="-1e+16" upper="1e+16" velocity="0.0"/>
+  </joint>
+  <link name="velodyne__base">
+    <inertial>
+      <mass value="1.2"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.001087473" ixy="0" ixz="0" iyy="0.001087473" iyz="0" izz="0.001092437"/>
+    </inertial>
+    <collision name="velodyne__base_collision">
+      <origin rpy="0  0  0" xyz="0       0       0.02933"/>
+      <geometry>
+        <cylinder length=".05867" radius=".04267"/>
+      </geometry>
+    </collision>
+    <visual name="velodyne__base_visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://meshes/velodyne_base.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="velodyne__top">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.000090623" ixy="0" ixz="0" iyy="0.000090623" iyz="0" izz="0.000091036"/>
+    </inertial>
+    <collision name="velodyne__top_collision">
+      <origin rpy="0  0  0" xyz="0       0       0.03678"/>
+      <geometry>
+        <cylinder length="0.07357" radius="0.04267"/>
+      </geometry>
+    </collision>
+    <visual name="velodyne__top_visual">
+      <origin rpy="0      0      1.5707" xyz="0       0      -0.00089"/>
+      <geometry>
+        <mesh filename="package://meshes/velodyne_top.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+  
+</robot>

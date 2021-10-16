@@ -1,0 +1,8 @@
+prefix=/home/mahrous/catkin_ws/devel
+
+Name: my_localizer_launcher
+Description: Description of my_localizer_launcher
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

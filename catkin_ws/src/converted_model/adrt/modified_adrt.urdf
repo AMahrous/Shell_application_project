@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+
+<robot name="adrtrobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <xacro:property name="cameraSize" value="0.05" />
+    <xacro:property name="cameraMass" value="0.1" />
+    
+    <xacro:include filename="$(find adrt_description)/urdf/materials.xacro"/>
+    <xacro:include filename="$(find adrt_description)/urdf/adrt.gazebo"/>
+
+<!-- chassis -->
+  <link name="chassis">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="adrt__collision">
+      <origin rpy="0  0  0" xyz="-0.15  0    0.1"/>
+      <geometry>
+        <box size="2 1 0.5"/>
+      </geometry>
+    </collision>
+    <visual name="adrt__visual">
+      <origin rpy="0  0  0" xyz="-0.15  0    0.1"/>
+      <geometry>
+        <box size="2 1 0.5"/>
+      </geometry>
+    </visual>
+  </link>
+<!-- chassis -->
+
+
+
+<!-- left_wheel -->
+  <link name="left_wheel">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision name="adrt__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.25" radius="0.3"/>
+      </geometry>
+    </collision>
+    <visual name="adrt__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.25" radius="0.3"/>
+      </geometry>
+    </visual>
+  </link>
+<!-- left_wheel -->
+
+
+
+<!-- right_wheel -->
+  <link name="right_wheel">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision name="adrt__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.25" radius="0.3"/>
+      </geometry>
+    </collision>
+    <visual name="adrt__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.25" radius="0.3"/>
+      </geometry>
+    </visual>
+  </link>
+<!-- right_wheel -->
+
+
+
+<!-- caster_wheel -->
+  <link name="caster_wheel">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
+    <collision name="adrt__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <sphere radius="0.2"/>
+      </geometry>
+    </collision>
+    <visual name="adrt__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <sphere radius="0.2"/>
+      </geometry>
+    </visual>
+  </link>
+<!-- caster_wheel -->
+
+
+
+<!-- left_wheel_joint -->
+  <joint name="left_wheel_hinge" type="revolute">
+    <parent link="chassis"/>
+    <child link="left_wheel"/>
+    <origin rpy="1.5707  0      0" xyz="0.55    -0.62502  0"/>
+    <axis xyz="0.00000000e+00   1.00000000e+00   9.00000000e-05"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+<!-- left_wheel_joint -->
+
+
+
+<!-- right_wheel_joint -->
+  <joint name="right_wheel_hinge" type="revolute">
+    <parent link="adrt__link_0"/>
+    <child link="right_wheel"/>
+    <origin rpy="1.5707  0      0" xyz="0.55     0.62502  0"/>
+    <axis xyz="0.00000000e+00   1.00000000e+00   9.00000000e-05"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+<!-- right_wheel_joint -->
+
+
+
+<!-- caster_wheel_joint -->
+  <joint name="caster_wheel_joint" type="ball">
+    <parent link="chassis"/>
+    <child link="caster_wheel"/>
+    <origin rpy="0  0  0" xyz="-0.95  0   -0.1"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+<!-- caster_wheel_joint -->
+
+
+
+
+
+</robot>

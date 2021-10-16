@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/gazebo_msgs_generate_messages_nodejs"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/LinkStates.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/LinkState.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ContactsState.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ODEJointProperties.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ModelStates.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ODEPhysics.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ContactState.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ModelState.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/WorldState.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetLightProperties.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/DeleteLight.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SpawnModel.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetJointProperties.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetModelConfiguration.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetWorldProperties.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetLinkState.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetPhysicsProperties.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetPhysicsProperties.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetLightProperties.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetModelProperties.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetLinkProperties.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/ApplyBodyWrench.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/DeleteModel.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetModelState.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/JointRequest.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/ApplyJointEffort.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetModelState.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetJointTrajectory.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetLinkState.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetJointProperties.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetLinkProperties.js"
+  "/home/mahrous/adrt_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/BodyRequest.js"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

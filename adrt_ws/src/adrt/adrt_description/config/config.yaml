@@ -1,0 +1,11 @@
+
+adrt:
+joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 20
+ 
+
+hokuyo_joint_position_controller:
+    type: effor_controllers/JointPositionController
+    joint: hokuyo_joint
+    pid: {p: 1.0, i: 1.0, d: 0.0}

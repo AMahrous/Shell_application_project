@@ -1,0 +1,2 @@
+adrt/adrt_description:adrt/adrt_gazebo:gazebo_ros_pkgs/gazebo_dev:gazebo_ros_pkgs/gazebo_msgs:gazebo_ros_pkgs/gazebo_plugins:gazebo_ros_pkgs/gazebo_ros:gazebo_ros_pkgs/gazebo_ros_control:gazebo_ros_pkgs/gazebo_ros_pkgs:hector_gazebo_plugins
+-DCATKIN_DEVEL_PREFIX=/home/mahrous/adrt_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mahrous/adrt_ws/install -G Unix Makefiles

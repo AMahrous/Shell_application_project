@@ -1,0 +1,8 @@
+prefix=/home/mahrous/catkin_ws/devel
+
+Name: smart_grasp_moveit_config
+Description: Description of smart_grasp_moveit_config
+Version: 0.2.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

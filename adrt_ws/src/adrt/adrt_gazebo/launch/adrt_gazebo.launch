@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find adrt_gazebo)/worlds/complex_world.world"/> Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <!-- Convert an xacro and put on parameter server -->
+  <param name="robot_description" command="$(find xacro)/xacro.py $(find adrt_description)/urdf/adrt.xacro" />
+
+
+  <arg name="x" default="0" />
+  <arg name="y" default="0" />
+
+  <!-- Spawn a robot into Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" args="-param robot_description -urdf -model adrt -x $(arg x) -y $(arg y)" />
+
+
+</launch>
